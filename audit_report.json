@@ -1,0 +1,1832 @@
+{
+  "provenance": {
+    "source_file": "Kestrel_RnD_Export_2026-05.xlsx",
+    "sha256_hash": "d64e01af845b13385076bb3cc6aa94485a9bc56159c990a238e64708bd5d2710",
+    "source_unchanged_during_execution": true,
+    "execution_integrity_note": "Matching pre- and post-audit SHA-256 hashes confirm the source workbook was unchanged during execution."
+  },
+  "schemas": {
+    "Export_Info": {
+      "sheet_name": "Export_Info",
+      "row_count": 18,
+      "column_count": 3,
+      "columns": [
+        "Kestrel Specialty Chemicals - LabTrack / PurchaseOne combined export",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ],
+      "unnamed_column_count": 2,
+      "unnamed_columns": [
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ],
+      "completely_empty_rows": 2,
+      "missing_values": {
+        "Kestrel Specialty Chemicals - LabTrack / PurchaseOne combined export": 2,
+        "Unnamed: 1": 2,
+        "Unnamed: 2": 16
+      },
+      "is_unstructured_or_scratch": true
+    },
+    "RM_Master": {
+      "sheet_name": "RM_Master",
+      "row_count": 28,
+      "column_count": 13,
+      "columns": [
+        "code",
+        "name",
+        "synonyms",
+        "function",
+        "category",
+        "bu",
+        "supplier",
+        "status",
+        "list_price",
+        "currency",
+        "uom",
+        "price_updated",
+        "notes"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {
+        "synonyms": 13,
+        "notes": 17
+      },
+      "is_unstructured_or_scratch": false
+    },
+    "Price_Feed": {
+      "sheet_name": "Price_Feed",
+      "row_count": 230,
+      "column_count": 6,
+      "columns": [
+        "code",
+        "month",
+        "price",
+        "currency",
+        "source",
+        "entry_type"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {},
+      "is_unstructured_or_scratch": false
+    },
+    "Trials_TX_Softeners": {
+      "sheet_name": "Trials_TX_Softeners",
+      "row_count": 12,
+      "column_count": 19,
+      "columns": [
+        "trial_id",
+        "project",
+        "date",
+        "chemist",
+        "lab",
+        "batch_code",
+        "equipment_id",
+        "formulation_pct",
+        "batch_size_g",
+        "mixing_rpm",
+        "process_temp_c",
+        "solids_pct",
+        "ph",
+        "viscosity",
+        "softness",
+        "stability_45c_4wk",
+        "approved_by",
+        "lims_status",
+        "notes"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {
+        "ph": 1,
+        "approved_by": 2,
+        "notes": 3
+      },
+      "is_unstructured_or_scratch": false
+    },
+    "Trials_All_Projects": {
+      "sheet_name": "Trials_All_Projects",
+      "row_count": 75,
+      "column_count": 13,
+      "columns": [
+        "lims_id",
+        "project",
+        "created",
+        "analyst",
+        "recipe",
+        "measure_1",
+        "value_1",
+        "measure_2",
+        "value_2",
+        "measure_3",
+        "value_3",
+        "result",
+        "comments"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {
+        "comments": 39
+      },
+      "is_unstructured_or_scratch": false
+    },
+    "Stability_Log": {
+      "sheet_name": "Stability_Log",
+      "row_count": 111,
+      "column_count": 7,
+      "columns": [
+        "sample_id",
+        "week",
+        "temp_c",
+        "appearance",
+        "phase_sep",
+        "colour_b_star",
+        "observer"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {},
+      "is_unstructured_or_scratch": false
+    },
+    "Panel_Scores": {
+      "sheet_name": "Panel_Scores",
+      "row_count": 60,
+      "column_count": 5,
+      "columns": [
+        "trial_id",
+        "panelist",
+        "score",
+        "scale",
+        "substrate"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {},
+      "is_unstructured_or_scratch": false
+    },
+    "Customer_Requests": {
+      "sheet_name": "Customer_Requests",
+      "row_count": 28,
+      "column_count": 8,
+      "columns": [
+        "request_id",
+        "date",
+        "customer",
+        "bu",
+        "need",
+        "constraints",
+        "status",
+        "owner"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {
+        "constraints": 8
+      },
+      "is_unstructured_or_scratch": false
+    },
+    "Lab_Schedule": {
+      "sheet_name": "Lab_Schedule",
+      "row_count": 45,
+      "column_count": 7,
+      "columns": [
+        "booking_id",
+        "date",
+        "equipment_id",
+        "slot",
+        "booked_by",
+        "project",
+        "status"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {},
+      "is_unstructured_or_scratch": false
+    },
+    "Regulatory_Notes": {
+      "sheet_name": "Regulatory_Notes",
+      "row_count": 10,
+      "column_count": 5,
+      "columns": [
+        "code",
+        "jurisdiction",
+        "note",
+        "source",
+        "last_reviewed"
+      ],
+      "unnamed_column_count": 0,
+      "unnamed_columns": [],
+      "completely_empty_rows": 0,
+      "missing_values": {},
+      "is_unstructured_or_scratch": false
+    },
+    "Summary_Apr": {
+      "sheet_name": "Summary_Apr",
+      "row_count": 10,
+      "column_count": 5,
+      "columns": [
+        "TX-SOFT-26 softener project - April review summary",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4"
+      ],
+      "unnamed_column_count": 4,
+      "unnamed_columns": [
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4"
+      ],
+      "completely_empty_rows": 2,
+      "missing_values": {
+        "TX-SOFT-26 softener project - April review summary": 2,
+        "Unnamed: 1": 2,
+        "Unnamed: 2": 4,
+        "Unnamed: 3": 3,
+        "Unnamed: 4": 4
+      },
+      "is_unstructured_or_scratch": true
+    },
+    "Sheet3": {
+      "sheet_name": "Sheet3",
+      "row_count": 6,
+      "column_count": 4,
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3"
+      ],
+      "unnamed_column_count": 4,
+      "unnamed_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3"
+      ],
+      "completely_empty_rows": 2,
+      "missing_values": {
+        "Unnamed: 0": 6,
+        "Unnamed: 1": 3,
+        "Unnamed: 2": 5,
+        "Unnamed: 3": 5
+      },
+      "is_unstructured_or_scratch": true
+    }
+  },
+  "integrity": {
+    "duplicate_primary_keys": {
+      "Trials_All_Projects.lims_id": [
+        "L-2025-031",
+        "L-2025-044",
+        "L-2025-044",
+        "L-2025-031"
+      ],
+      "Customer_Requests.request_id": [
+        "CR-2026-117",
+        "CR-2026-117"
+      ]
+    },
+    "duplicate_batch_codes": [
+      {
+        "batch_code": "LT-2404-03",
+        "trial_ids": [
+          "T-07",
+          "T-08"
+        ],
+        "chemists": [
+          "MP",
+          "AK"
+        ],
+        "equipment": [
+          "MX-03",
+          "MX-05"
+        ],
+        "dates": [
+          "12-Apr-26",
+          "12-Apr-26"
+        ]
+      }
+    ],
+    "duplicate_price_feed_entries": [
+      {
+        "code": "RM-101",
+        "month": "2026-05",
+        "conflicting_entries": [
+          {
+            "price": 228.0,
+            "currency": "INR",
+            "source": "email - Supplier A",
+            "entry_type": "manual"
+          },
+          {
+            "price": 210.0,
+            "currency": "INR",
+            "source": "PurchaseOne",
+            "entry_type": "auto"
+          }
+        ]
+      },
+      {
+        "code": "RM-170",
+        "month": "2026-05",
+        "conflicting_entries": [
+          {
+            "price": 32800.0,
+            "currency": "INR",
+            "source": "PurchaseOne",
+            "entry_type": "auto"
+          },
+          {
+            "price": 164.0,
+            "currency": "INR",
+            "source": "quote per kg",
+            "entry_type": "manual"
+          }
+        ]
+      }
+    ],
+    "duplicate_customer_requests": [
+      {
+        "request_id": "CR-2026-117",
+        "records": [
+          {
+            "date": "2026-02-18",
+            "customer": "Harbor Knits",
+            "bu": "Textiles",
+            "need": "Silicone-free cationic softener for cotton knits",
+            "status": "Open",
+            "owner": "Sales-W"
+          },
+          {
+            "date": "2026-04-23",
+            "customer": "Sunvale Fabrics",
+            "bu": "Paper",
+            "need": "Liquid detergent with enzyme stability",
+            "status": "Closed - lost",
+            "owner": "Sales-S"
+          }
+        ]
+      }
+    ],
+    "cross_sheet_orphans": {}
+  },
+  "formulations": {
+    "tx_softeners": [
+      {
+        "trial_id": "T-01",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-101:5.0; RM-120:0.8; RM-150:0.2; RM-160:0.1; RM-180:93.9"
+      },
+      {
+        "trial_id": "T-02",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-101:7.0; RM-120:1.0; RM-150:0.2; RM-160:0.1; RM-180:91.7"
+      },
+      {
+        "trial_id": "T-03",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-115:7.0; RM-120:1.0; RM-150:0.4; RM-160:0.1; RM-180:91.5"
+      },
+      {
+        "trial_id": "T-04",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [
+          "TEA-esterquat"
+        ],
+        "ambiguous_tokens": [
+          {
+            "token": "TEA-esterquat",
+            "candidate_codes": [
+              "RM-101",
+              "RM-102"
+            ]
+          }
+        ],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "TEA-esterquat:7.0; RM-170:1.5; RM-120:1.0; RM-150:0.2; RM-160:0.1; RM-180:90.2"
+      },
+      {
+        "trial_id": "T-05",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-101:6.0; RM-115:1.5; RM-120:1.0; RM-150:0.3; RM-160:0.1; RM-180:91.1"
+      },
+      {
+        "trial_id": "T-06",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": true,
+        "parse_errors": [],
+        "raw_recipe": "RM-101:6.5; RM-131:2.0; RM-120:0.8; RM-150:0.2; RM-160:0.1; RM-180:90.4"
+      },
+      {
+        "trial_id": "T-07",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-101:7.0; RM-170:1.0; RM-120:1.0; RM-150:0.2; RM-160:0.1; RM-180:90.7"
+      },
+      {
+        "trial_id": "T-08",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-102:7.0; RM-170:1.0; RM-120:1.0; RM-150:0.2; RM-160:0.1; RM-180:90.7"
+      },
+      {
+        "trial_id": "T-09",
+        "total_percentage": 103.0,
+        "is_stoichiometry_valid": false,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-101:7.5; RM-115:2.0; RM-170:1.5; RM-120:1.0; RM-150:0.3; RM-160:0.1; RM-180:90.6"
+      },
+      {
+        "trial_id": "T-10",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": true,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-101:6.0; RM-140:2.0; RM-120:0.8; RM-150:0.2; RM-160:0.1; RM-180:90.9"
+      },
+      {
+        "trial_id": "T-11",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-115:6.0; RM-170:1.0; RM-120:1.0; RM-150:0.4; RM-160:0.1; RM-180:91.5"
+      },
+      {
+        "trial_id": "T-12",
+        "total_percentage": 100.0,
+        "is_stoichiometry_valid": true,
+        "unmapped_tokens": [],
+        "ambiguous_tokens": [],
+        "contains_silicone": false,
+        "flammable_alcohol_excess": false,
+        "parse_errors": [],
+        "raw_recipe": "RM-101:6.5; RM-170:0.8; RM-120:0.9; RM-150:0.2; RM-160:0.1; RM-180:91.5"
+      }
+    ]
+  },
+  "units_and_dates": {
+    "viscosity_units": [
+      {
+        "trial_id": "T-01",
+        "raw_value": "40 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 40.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": true
+      },
+      {
+        "trial_id": "T-02",
+        "raw_value": "180 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 180.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": false
+      },
+      {
+        "trial_id": "T-03",
+        "raw_value": "220 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 220.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": false
+      },
+      {
+        "trial_id": "T-04",
+        "raw_value": "0.45 Pa\u00b7s",
+        "unit_detected": "Pa\u00b7s",
+        "normalized_cP": 450.0,
+        "is_non_standard_unit": true,
+        "exceeds_customer_target": true
+      },
+      {
+        "trial_id": "T-05",
+        "raw_value": "260 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 260.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": false
+      },
+      {
+        "trial_id": "T-06",
+        "raw_value": "120 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 120.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": false
+      },
+      {
+        "trial_id": "T-07",
+        "raw_value": "240 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 240.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": false
+      },
+      {
+        "trial_id": "T-08",
+        "raw_value": "310 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 310.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": true
+      },
+      {
+        "trial_id": "T-09",
+        "raw_value": "410 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 410.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": true
+      },
+      {
+        "trial_id": "T-10",
+        "raw_value": "150 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 150.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": false
+      },
+      {
+        "trial_id": "T-11",
+        "raw_value": "200 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 200.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": false
+      },
+      {
+        "trial_id": "T-12",
+        "raw_value": "190 cP",
+        "unit_detected": "cP",
+        "normalized_cP": 190.0,
+        "is_non_standard_unit": false,
+        "exceeds_customer_target": false
+      }
+    ],
+    "softness_scales": {
+      "tx_softeners_scales": [
+        {
+          "trial_id": "T-01",
+          "raw_value": "3/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-02",
+          "raw_value": "4/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-03",
+          "raw_value": "4/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-04",
+          "raw_value": "5/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-05",
+          "raw_value": "4/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-06",
+          "raw_value": "8/10",
+          "scale_denominator": "10",
+          "is_non_standard_scale": true
+        },
+        {
+          "trial_id": "T-07",
+          "raw_value": "5/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-08",
+          "raw_value": "4/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-09",
+          "raw_value": "5/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-10",
+          "raw_value": "5/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-11",
+          "raw_value": "4/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        },
+        {
+          "trial_id": "T-12",
+          "raw_value": "4/5",
+          "scale_denominator": "5",
+          "is_non_standard_scale": false
+        }
+      ],
+      "panel_scores_scales": {
+        "scale_distribution": {
+          "1-5": 55,
+          "1-10": 5
+        },
+        "trials_on_10_scale": [
+          "T-06"
+        ]
+      }
+    },
+    "uom_packaging_mismatch": [
+      {
+        "sheet": "RM_Master",
+        "code": "RM-170",
+        "name": "Polyethylene wax emulsion",
+        "uom": "drum (200 kg)",
+        "list_price": 32000.0,
+        "currency": "INR",
+        "risk": "Unit is not standard per-kg; requires dimensional conversion."
+      }
+    ],
+    "date_formats_tx_softeners": [
+      {
+        "trial_id": "T-01",
+        "date_string": "2026-03-01",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      },
+      {
+        "trial_id": "T-02",
+        "date_string": "2026-03-08",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      },
+      {
+        "trial_id": "T-03",
+        "date_string": "2026-03-15",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      },
+      {
+        "trial_id": "T-04",
+        "date_string": "2026-03-22",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      },
+      {
+        "trial_id": "T-05",
+        "date_string": "2026-04-02",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      },
+      {
+        "trial_id": "T-06",
+        "date_string": "04/05/2026",
+        "format_type": "Slash (DD/MM/YYYY or MM/DD/YYYY)",
+        "is_ambiguous_or_non_iso": true
+      },
+      {
+        "trial_id": "T-07",
+        "date_string": "12-Apr-26",
+        "format_type": "Alphanumeric (DD-Mon-YY)",
+        "is_ambiguous_or_non_iso": true
+      },
+      {
+        "trial_id": "T-08",
+        "date_string": "12-Apr-26",
+        "format_type": "Alphanumeric (DD-Mon-YY)",
+        "is_ambiguous_or_non_iso": true
+      },
+      {
+        "trial_id": "T-09",
+        "date_string": "2026-04-20",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      },
+      {
+        "trial_id": "T-10",
+        "date_string": "2026-04-28",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      },
+      {
+        "trial_id": "T-11",
+        "date_string": "2026-05-06",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      },
+      {
+        "trial_id": "T-12",
+        "date_string": "2026-05-13",
+        "format_type": "ISO (YYYY-MM-DD)",
+        "is_ambiguous_or_non_iso": false
+      }
+    ],
+    "date_formats_trials_all": {
+      "total_records": 75,
+      "slash_formatted_dates": 50,
+      "hyphen_formatted_dates": 25,
+      "risk": "Mixed DD/MM/YYYY and YYYY-MM-DD prevents native lexical sort or date arithmetic."
+    },
+    "chronological_anomalies": [
+      {
+        "entity": "Stability_Log",
+        "sample_id": "T-12",
+        "trial_date": "2026-05-13",
+        "export_date": "2026-05-20",
+        "weeks_logged": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "anomaly": "Trial T-12 was formulated on 2026-05-13 (7 days before export), yet Stability_Log contains Week 2, Week 3, and Week 4 measurements. Apparent chronology/status inconsistency requiring protocol and LIMS verification.",
+        "classification": "Apparent chronology/status inconsistency requiring verification"
+      },
+      {
+        "entity": "Lab_Schedule",
+        "booking_id": "BK-2601",
+        "date": "2026-05-21",
+        "export_date": "2026-05-20",
+        "equipment_id": "MX-03",
+        "status": "Completed",
+        "anomaly": "Booking scheduled for date 2026-05-21 after export 2026-05-20 is marked as 'Completed'. Apparent chronology/status inconsistency requiring verification.",
+        "classification": "Apparent chronology/status inconsistency requiring verification"
+      },
+      {
+        "entity": "Lab_Schedule",
+        "booking_id": "BK-2610",
+        "date": "2026-05-21",
+        "export_date": "2026-05-20",
+        "equipment_id": "STAB-CH2",
+        "status": "Completed",
+        "anomaly": "Booking scheduled for date 2026-05-21 after export 2026-05-20 is marked as 'Completed'. Apparent chronology/status inconsistency requiring verification.",
+        "classification": "Apparent chronology/status inconsistency requiring verification"
+      },
+      {
+        "entity": "Lab_Schedule",
+        "booking_id": "BK-2624",
+        "date": "2026-05-27",
+        "export_date": "2026-05-20",
+        "equipment_id": "MX-02",
+        "status": "Completed",
+        "anomaly": "Booking scheduled for date 2026-05-27 after export 2026-05-20 is marked as 'Completed'. Apparent chronology/status inconsistency requiring verification.",
+        "classification": "Apparent chronology/status inconsistency requiring verification"
+      },
+      {
+        "entity": "Lab_Schedule",
+        "booking_id": "BK-2636",
+        "date": "2026-06-05",
+        "export_date": "2026-05-20",
+        "equipment_id": "MX-05",
+        "status": "Completed",
+        "anomaly": "Booking scheduled for date 2026-06-05 after export 2026-05-20 is marked as 'Completed'. Apparent chronology/status inconsistency requiring verification.",
+        "classification": "Apparent chronology/status inconsistency requiring verification"
+      },
+      {
+        "entity": "Lab_Schedule",
+        "booking_id": "BK-2638",
+        "date": "2026-06-05",
+        "export_date": "2026-05-20",
+        "equipment_id": "VISC-1",
+        "status": "Completed",
+        "anomaly": "Booking scheduled for date 2026-06-05 after export 2026-05-20 is marked as 'Completed'. Apparent chronology/status inconsistency requiring verification.",
+        "classification": "Apparent chronology/status inconsistency requiring verification"
+      }
+    ]
+  },
+  "pricing": {
+    "duplicate_month_entries": [
+      {
+        "code": "RM-101",
+        "month": "2026-05",
+        "conflicting_records": [
+          {
+            "price": 228.0,
+            "currency": "INR",
+            "source": "email - Supplier A",
+            "entry_type": "manual"
+          },
+          {
+            "price": 210.0,
+            "currency": "INR",
+            "source": "PurchaseOne",
+            "entry_type": "auto"
+          }
+        ],
+        "price_delta": 18.0
+      },
+      {
+        "code": "RM-170",
+        "month": "2026-05",
+        "conflicting_records": [
+          {
+            "price": 32800.0,
+            "currency": "INR",
+            "source": "PurchaseOne",
+            "entry_type": "auto"
+          },
+          {
+            "price": 164.0,
+            "currency": "INR",
+            "source": "quote per kg",
+            "entry_type": "manual"
+          }
+        ],
+        "price_delta": 32636.0
+      }
+    ],
+    "master_vs_feed_discrepancies": [
+      {
+        "code": "RM-102",
+        "name": "Esterquat-90 (TEA)",
+        "master_price": 198.0,
+        "master_currency": "INR",
+        "master_updated": "2025-09-15",
+        "latest_feed_price": 216.0,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-115",
+        "name": "Fatty amidoamine",
+        "master_price": 180.0,
+        "master_currency": "INR",
+        "master_updated": "2026-02-10",
+        "latest_feed_price": 184.0,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-120",
+        "name": "Fatty alcohol ethoxylate 7EO",
+        "master_price": 140.0,
+        "master_currency": "INR",
+        "master_updated": "2026-03-01",
+        "latest_feed_price": 143.0,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-131",
+        "name": "Isopropanol",
+        "master_price": 95.0,
+        "master_currency": "INR",
+        "master_updated": "2026-04-02",
+        "latest_feed_price": 97.0,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-140",
+        "name": "Amino silicone micro-emulsion",
+        "master_price": 4.6,
+        "master_currency": "USD",
+        "master_updated": "2026-01-20",
+        "latest_feed_price": 4.7,
+        "latest_feed_currency": "USD",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-150",
+        "name": "Acetic acid (glacial)",
+        "master_price": 60.0,
+        "master_currency": "INR",
+        "master_updated": "2026-04-02",
+        "latest_feed_price": 61.0,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-160",
+        "name": "Isothiazolinone blend",
+        "master_price": 5.4,
+        "master_currency": "USD",
+        "master_updated": "2026-02-14",
+        "latest_feed_price": 5.5,
+        "latest_feed_currency": "USD",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-165",
+        "name": "Benzoate/sorbate blend",
+        "master_price": 220.0,
+        "master_currency": "INR",
+        "master_updated": "2026-03-11",
+        "latest_feed_price": 223.0,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-170",
+        "name": "Polyethylene wax emulsion",
+        "master_price": 32000.0,
+        "master_currency": "INR",
+        "master_updated": "2026-01-05",
+        "latest_feed_price": 32800.0,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-201",
+        "name": "Linear alkylbenzene sulphonic acid",
+        "master_price": 132.0,
+        "master_currency": "INR",
+        "master_updated": "2026-04-15",
+        "latest_feed_price": 123.87,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-202",
+        "name": "SLES 70%",
+        "master_price": 118.0,
+        "master_currency": "INR",
+        "master_updated": "2026-04-15",
+        "latest_feed_price": 114.86,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-203",
+        "name": "Protease enzyme (liquid)",
+        "master_price": 9.8,
+        "master_currency": "USD",
+        "master_updated": "2026-03-30",
+        "latest_feed_price": 9.24,
+        "latest_feed_currency": "USD",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-301",
+        "name": "AKD wax dispersion 15%",
+        "master_price": 74.0,
+        "master_currency": "INR",
+        "master_updated": "2026-03-18",
+        "latest_feed_price": 72.67,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-302",
+        "name": "Cationic starch",
+        "master_price": 52.0,
+        "master_currency": "INR",
+        "master_updated": "2026-03-18",
+        "latest_feed_price": 50.93,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-303",
+        "name": "PAE wet-strength resin",
+        "master_price": 96.0,
+        "master_currency": "INR",
+        "master_updated": "2026-03-18",
+        "latest_feed_price": 93.81,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-401",
+        "name": "Polyamine fixative",
+        "master_price": 165.0,
+        "master_currency": "INR",
+        "master_updated": "2026-02-10",
+        "latest_feed_price": 161.12,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-402",
+        "name": "PolyDADMAC 40%",
+        "master_price": 142.0,
+        "master_currency": "INR",
+        "master_updated": "2026-02-10",
+        "latest_feed_price": 141.75,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      },
+      {
+        "code": "RM-503",
+        "name": "Glycerine",
+        "master_price": 102.0,
+        "master_currency": "INR",
+        "master_updated": "2026-04-02",
+        "latest_feed_price": 103.12,
+        "latest_feed_currency": "INR",
+        "latest_feed_month": "2026-05",
+        "source": "PurchaseOne"
+      }
+    ],
+    "currency_distribution": {
+      "RM_Master": {
+        "INR": 24,
+        "USD": 4
+      },
+      "Price_Feed": {
+        "INR": 194,
+        "USD": 36
+      }
+    },
+    "summary_apr_cost_audit": {
+      "summary_apr_claimed_cost_t04": 16.9,
+      "scenarios": {
+        "scenario_1_rm_master_rm101": {
+          "description": "RM_Master list prices resolving TEA-esterquat to RM-101 (Supplier A @ \u20b9210/kg)",
+          "recalculated_cost_inr": 19.98,
+          "line_items": [
+            {
+              "token": "TEA-esterquat",
+              "resolved_code": "RM-101",
+              "name": "Esterquat 90",
+              "percentage": 7.0,
+              "selected_price": 210.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2025-11-03)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 210.0,
+              "cost_contribution_inr": 14.7
+            },
+            {
+              "token": "RM-170",
+              "resolved_code": "RM-170",
+              "name": "Polyethylene wax emulsion",
+              "percentage": 1.5,
+              "selected_price": 32000.0,
+              "currency": "INR",
+              "uom": "drum (200 kg)",
+              "price_source": "RM_Master (updated 2026-01-05)",
+              "uom_conversion": "Drum (200 kg) divided by 200 -> per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 160.0,
+              "cost_contribution_inr": 2.4
+            },
+            {
+              "token": "RM-120",
+              "resolved_code": "RM-120",
+              "name": "Fatty alcohol ethoxylate 7EO",
+              "percentage": 1.0,
+              "selected_price": 140.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2026-03-01)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 140.0,
+              "cost_contribution_inr": 1.4
+            },
+            {
+              "token": "RM-150",
+              "resolved_code": "RM-150",
+              "name": "Acetic acid (glacial)",
+              "percentage": 0.2,
+              "selected_price": 60.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2026-04-02)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 60.0,
+              "cost_contribution_inr": 0.12
+            },
+            {
+              "token": "RM-160",
+              "resolved_code": "RM-160",
+              "name": "Isothiazolinone blend",
+              "percentage": 0.1,
+              "selected_price": 5.4,
+              "currency": "USD",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2026-02-14)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "USD 5.40 * 84.00 FX = \u20b9453.60/kg",
+              "effective_price_per_kg_inr": 453.6,
+              "cost_contribution_inr": 0.4536
+            },
+            {
+              "token": "RM-180",
+              "resolved_code": "RM-180",
+              "name": "Water (demineralised)",
+              "percentage": 90.2,
+              "selected_price": 1.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2024-04-01)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 1.0,
+              "cost_contribution_inr": 0.902
+            }
+          ]
+        },
+        "scenario_2_rm_master_rm102": {
+          "description": "RM_Master list prices resolving TEA-esterquat to RM-102 (Supplier B @ \u20b9198/kg)",
+          "recalculated_cost_inr": 19.14,
+          "line_items": [
+            {
+              "token": "TEA-esterquat",
+              "resolved_code": "RM-102",
+              "name": "Esterquat-90 (TEA)",
+              "percentage": 7.0,
+              "selected_price": 198.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2025-09-15)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 198.0,
+              "cost_contribution_inr": 13.86
+            },
+            {
+              "token": "RM-170",
+              "resolved_code": "RM-170",
+              "name": "Polyethylene wax emulsion",
+              "percentage": 1.5,
+              "selected_price": 32000.0,
+              "currency": "INR",
+              "uom": "drum (200 kg)",
+              "price_source": "RM_Master (updated 2026-01-05)",
+              "uom_conversion": "Drum (200 kg) divided by 200 -> per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 160.0,
+              "cost_contribution_inr": 2.4
+            },
+            {
+              "token": "RM-120",
+              "resolved_code": "RM-120",
+              "name": "Fatty alcohol ethoxylate 7EO",
+              "percentage": 1.0,
+              "selected_price": 140.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2026-03-01)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 140.0,
+              "cost_contribution_inr": 1.4
+            },
+            {
+              "token": "RM-150",
+              "resolved_code": "RM-150",
+              "name": "Acetic acid (glacial)",
+              "percentage": 0.2,
+              "selected_price": 60.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2026-04-02)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 60.0,
+              "cost_contribution_inr": 0.12
+            },
+            {
+              "token": "RM-160",
+              "resolved_code": "RM-160",
+              "name": "Isothiazolinone blend",
+              "percentage": 0.1,
+              "selected_price": 5.4,
+              "currency": "USD",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2026-02-14)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "USD 5.40 * 84.00 FX = \u20b9453.60/kg",
+              "effective_price_per_kg_inr": 453.6,
+              "cost_contribution_inr": 0.4536
+            },
+            {
+              "token": "RM-180",
+              "resolved_code": "RM-180",
+              "name": "Water (demineralised)",
+              "percentage": 90.2,
+              "selected_price": 1.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2024-04-01)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 1.0,
+              "cost_contribution_inr": 0.902
+            }
+          ]
+        },
+        "scenario_3_feed_latest_auto_rm101": {
+          "description": "Price_Feed 2026-05 auto feed with RM-101 (PurchaseOne @ \u20b9210/kg)",
+          "recalculated_cost_inr": 20.08,
+          "line_items": [
+            {
+              "token": "TEA-esterquat",
+              "resolved_code": "RM-101",
+              "name": "Esterquat 90",
+              "percentage": 7.0,
+              "selected_price": 210.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 210.0,
+              "cost_contribution_inr": 14.7
+            },
+            {
+              "token": "RM-170",
+              "resolved_code": "RM-170",
+              "name": "Polyethylene wax emulsion",
+              "percentage": 1.5,
+              "selected_price": 164.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (quote per kg, manual)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 164.0,
+              "cost_contribution_inr": 2.46
+            },
+            {
+              "token": "RM-120",
+              "resolved_code": "RM-120",
+              "name": "Fatty alcohol ethoxylate 7EO",
+              "percentage": 1.0,
+              "selected_price": 143.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 143.0,
+              "cost_contribution_inr": 1.43
+            },
+            {
+              "token": "RM-150",
+              "resolved_code": "RM-150",
+              "name": "Acetic acid (glacial)",
+              "percentage": 0.2,
+              "selected_price": 61.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 61.0,
+              "cost_contribution_inr": 0.122
+            },
+            {
+              "token": "RM-160",
+              "resolved_code": "RM-160",
+              "name": "Isothiazolinone blend",
+              "percentage": 0.1,
+              "selected_price": 5.5,
+              "currency": "USD",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "USD 5.50 * 84.00 FX = \u20b9462.00/kg",
+              "effective_price_per_kg_inr": 462.0,
+              "cost_contribution_inr": 0.462
+            },
+            {
+              "token": "RM-180",
+              "resolved_code": "RM-180",
+              "name": "Water (demineralised)",
+              "percentage": 90.2,
+              "selected_price": 1.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2024-04-01)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 1.0,
+              "cost_contribution_inr": 0.902
+            }
+          ]
+        },
+        "scenario_4_feed_latest_manual_rm101": {
+          "description": "Price_Feed 2026-05 manual feed with RM-101 (Supplier A email @ \u20b9228/kg)",
+          "recalculated_cost_inr": 21.34,
+          "line_items": [
+            {
+              "token": "TEA-esterquat",
+              "resolved_code": "RM-101",
+              "name": "Esterquat 90",
+              "percentage": 7.0,
+              "selected_price": 228.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (email - Supplier A, manual)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 228.0,
+              "cost_contribution_inr": 15.96
+            },
+            {
+              "token": "RM-170",
+              "resolved_code": "RM-170",
+              "name": "Polyethylene wax emulsion",
+              "percentage": 1.5,
+              "selected_price": 164.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (quote per kg, manual)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 164.0,
+              "cost_contribution_inr": 2.46
+            },
+            {
+              "token": "RM-120",
+              "resolved_code": "RM-120",
+              "name": "Fatty alcohol ethoxylate 7EO",
+              "percentage": 1.0,
+              "selected_price": 143.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 143.0,
+              "cost_contribution_inr": 1.43
+            },
+            {
+              "token": "RM-150",
+              "resolved_code": "RM-150",
+              "name": "Acetic acid (glacial)",
+              "percentage": 0.2,
+              "selected_price": 61.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 61.0,
+              "cost_contribution_inr": 0.122
+            },
+            {
+              "token": "RM-160",
+              "resolved_code": "RM-160",
+              "name": "Isothiazolinone blend",
+              "percentage": 0.1,
+              "selected_price": 5.5,
+              "currency": "USD",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "USD 5.50 * 84.00 FX = \u20b9462.00/kg",
+              "effective_price_per_kg_inr": 462.0,
+              "cost_contribution_inr": 0.462
+            },
+            {
+              "token": "RM-180",
+              "resolved_code": "RM-180",
+              "name": "Water (demineralised)",
+              "percentage": 90.2,
+              "selected_price": 1.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2024-04-01)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 1.0,
+              "cost_contribution_inr": 0.902
+            }
+          ]
+        },
+        "scenario_5_feed_latest_auto_rm102": {
+          "description": "Price_Feed 2026-05 auto feed with RM-102 (PurchaseOne @ \u20b9216/kg)",
+          "recalculated_cost_inr": 20.5,
+          "line_items": [
+            {
+              "token": "TEA-esterquat",
+              "resolved_code": "RM-102",
+              "name": "Esterquat-90 (TEA)",
+              "percentage": 7.0,
+              "selected_price": 216.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 216.0,
+              "cost_contribution_inr": 15.12
+            },
+            {
+              "token": "RM-170",
+              "resolved_code": "RM-170",
+              "name": "Polyethylene wax emulsion",
+              "percentage": 1.5,
+              "selected_price": 164.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (quote per kg, manual)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 164.0,
+              "cost_contribution_inr": 2.46
+            },
+            {
+              "token": "RM-120",
+              "resolved_code": "RM-120",
+              "name": "Fatty alcohol ethoxylate 7EO",
+              "percentage": 1.0,
+              "selected_price": 143.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 143.0,
+              "cost_contribution_inr": 1.43
+            },
+            {
+              "token": "RM-150",
+              "resolved_code": "RM-150",
+              "name": "Acetic acid (glacial)",
+              "percentage": 0.2,
+              "selected_price": 61.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 61.0,
+              "cost_contribution_inr": 0.122
+            },
+            {
+              "token": "RM-160",
+              "resolved_code": "RM-160",
+              "name": "Isothiazolinone blend",
+              "percentage": 0.1,
+              "selected_price": 5.5,
+              "currency": "USD",
+              "uom": "kg",
+              "price_source": "Price_Feed 2026-05 (PurchaseOne, auto)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "USD 5.50 * 84.00 FX = \u20b9462.00/kg",
+              "effective_price_per_kg_inr": 462.0,
+              "cost_contribution_inr": 0.462
+            },
+            {
+              "token": "RM-180",
+              "resolved_code": "RM-180",
+              "name": "Water (demineralised)",
+              "percentage": 90.2,
+              "selected_price": 1.0,
+              "currency": "INR",
+              "uom": "kg",
+              "price_source": "RM_Master (updated 2024-04-01)",
+              "uom_conversion": "Direct per kg",
+              "fx_conversion": "None (Already INR)",
+              "effective_price_per_kg_inr": 1.0,
+              "cost_contribution_inr": 0.902
+            }
+          ]
+        }
+      },
+      "unresolved_uncertainty": "Summary_Apr row 10 claims 'Costs from RM_Master list prices', but reports \u20b916.90/kg. Deterministic recalculation across all plausible price and ingredient scenarios ranges from \u20b919.14 to \u20b921.34/kg. The workbook does not contain the underlying cell formulas, line-item schedule, or calculation notes for Summary_Apr. Consequently, the root cause of the \u20b916.90 figure cannot be proven from workbook evidence alone and requires author clarification."
+    }
+  },
+  "cross_sheet": {
+    "t05_stability_contradiction": {
+      "trial_id": "T-05",
+      "trials_sheet_status": "Pass",
+      "stability_log_records": [
+        {
+          "week": 0,
+          "temp_c": 45,
+          "appearance": "clear",
+          "phase_sep": "N",
+          "colour_b_star": 1.2,
+          "observer": "NJ"
+        },
+        {
+          "week": 0,
+          "temp_c": 25,
+          "appearance": "clear",
+          "phase_sep": "N",
+          "colour_b_star": 1.1,
+          "observer": "NJ"
+        },
+        {
+          "week": 1,
+          "temp_c": 45,
+          "appearance": "clear",
+          "phase_sep": "N",
+          "colour_b_star": 1.3,
+          "observer": "AK"
+        },
+        {
+          "week": 2,
+          "temp_c": 45,
+          "appearance": "clear",
+          "phase_sep": "N",
+          "colour_b_star": 1.1,
+          "observer": "MP"
+        },
+        {
+          "week": 3,
+          "temp_c": 45,
+          "appearance": "separated",
+          "phase_sep": "Y",
+          "colour_b_star": 1.4,
+          "observer": "MP"
+        },
+        {
+          "week": 4,
+          "temp_c": 45,
+          "appearance": "clear (re-homogenised)",
+          "phase_sep": "N",
+          "colour_b_star": 1.3,
+          "observer": "AK"
+        },
+        {
+          "week": 4,
+          "temp_c": 25,
+          "appearance": "clear",
+          "phase_sep": "N",
+          "colour_b_star": 0.9,
+          "observer": "NJ"
+        }
+      ],
+      "contradiction_found": true,
+      "classification": "Verified Finding"
+    },
+    "t04_governance_flags": {
+      "trial_id": "T-04",
+      "approved_by": null,
+      "is_unapproved": true,
+      "viscosity_raw": "0.45 Pa\u00b7s",
+      "normalized_viscosity_cP": 450.0,
+      "exceeds_target_range": true,
+      "unmapped_token": "TEA-esterquat",
+      "summary_apr_recommendation": "Rank 1: Best hand - recommend scale-up (Est RM cost 16.9 INR/kg)",
+      "classification": "Verified Finding"
+    },
+    "regulatory_notes_cross_check": [
+      {
+        "trial_id": "T-01",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-02",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-03",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-03",
+        "raw_material_code": "RM-115",
+        "source_jurisdiction": "-",
+        "source_note": "Technical note: some amidoamine grades yellow on heat ageing.",
+        "source_author": "R&D",
+        "last_reviewed": "2025-12-04",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-04",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-05",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-05",
+        "raw_material_code": "RM-115",
+        "source_jurisdiction": "-",
+        "source_note": "Technical note: some amidoamine grades yellow on heat ageing.",
+        "source_author": "R&D",
+        "last_reviewed": "2025-12-04",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-06",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-06",
+        "raw_material_code": "RM-131",
+        "source_jurisdiction": "India / transport",
+        "source_note": "Flammable liquid; finished products above 1% may need flash point testing and hazard labelling.",
+        "source_author": "Safety officer",
+        "last_reviewed": "2025-11-20",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-07",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-08",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-09",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-09",
+        "raw_material_code": "RM-115",
+        "source_jurisdiction": "-",
+        "source_note": "Technical note: some amidoamine grades yellow on heat ageing.",
+        "source_author": "R&D",
+        "last_reviewed": "2025-12-04",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-10",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-10",
+        "raw_material_code": "RM-140",
+        "source_jurisdiction": "-",
+        "source_note": "Silicone - excluded where customer specifies silicone-free.",
+        "source_author": "R&D",
+        "last_reviewed": "2024-09-10",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-11",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-11",
+        "raw_material_code": "RM-115",
+        "source_jurisdiction": "-",
+        "source_note": "Technical note: some amidoamine grades yellow on heat ageing.",
+        "source_author": "R&D",
+        "last_reviewed": "2025-12-04",
+        "classification": "Source Data Reference (Requires Verification)"
+      },
+      {
+        "trial_id": "T-12",
+        "raw_material_code": "RM-160",
+        "source_jurisdiction": "EU",
+        "source_note": "Isothiazolinones are skin sensitisers; labelling required above threshold. Check customer's market before use.",
+        "source_author": "Regulatory team",
+        "last_reviewed": "2026-01-15",
+        "classification": "Source Data Reference (Requires Verification)"
+      }
+    ],
+    "t11_incomplete_status": {
+      "trial_id": "T-11",
+      "lims_status": "Open",
+      "stability_status": "In progress (week 2)",
+      "ph_value": null,
+      "approved_by": null,
+      "is_incomplete": true,
+      "classification": "Verified Finding"
+    }
+  }
+}
