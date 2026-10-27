@@ -116,9 +116,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   }
   svg {
     max-width: 100%;
+    max-height: 360px;
     height: auto;
     display: block;
-    margin: 6px auto;
+    margin: 4px auto;
   }
   strong {
     color: #0f172a;
