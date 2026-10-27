@@ -1,108 +1,228 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" width="100%" height="340" style="background:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1380 1560" width="1380" height="1560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Formulation Candidate Workflow - Sequence Diagram</title>
+  <desc>Sequence diagram: Chemist, FastAPI Orchestrator, Inference Gateway, Store, Safety Barrier, Audit Log. Includes deterministic validation with a max-2 retry loop and a mandatory chemist sign-off gate.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
-    </marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
-    </marker>
-    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706" />
-    </marker>
+    <style>
+      .lbl { font-size: 13px; font-weight: 600; fill: #0f172a; }
+      .sub { font-size: 11px; fill: #64748b; }
+      .bn { font-size: 11px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+      .actor { fill: #ffffff; stroke: #334155; stroke-width: 1.5; }
+      .actor-t { font-size: 14px; font-weight: 700; fill: #0f172a; text-anchor: middle; }
+      .actor-s { font-size: 10.5px; fill: #64748b; text-anchor: middle; }
+      .life { stroke: #cbd5e1; stroke-width: 1.4; stroke-dasharray: 3 5; }
+      .act { fill: #e2e8f0; stroke: #94a3b8; stroke-width: 1; }
+      .a { stroke-width: 1.7; fill: none; }
+      .dash { stroke-dasharray: 7 4; }
+      .strip-t { font-size: 11px; font-weight: 700; fill: #ffffff; text-anchor: middle; letter-spacing: 1px; }
+      .cond { font-size: 11.5px; font-style: italic; fill: #475569; }
+      .legend-t { font-size: 11.5px; fill: #334155; }
+    </style>
+    <marker id="h-dark" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><polygon points="0,0 11,4.5 0,9" fill="#334155"/></marker>
+    <marker id="h-blue" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><polygon points="0,0 11,4.5 0,9" fill="#2563eb"/></marker>
+    <marker id="h-red" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><polygon points="0,0 11,4.5 0,9" fill="#dc2626"/></marker>
+    <marker id="h-orange" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><polygon points="0,0 11,4.5 0,9" fill="#ea580c"/></marker>
+    <marker id="h-green" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="9" refX="10" refY="4.5" orient="auto"><polygon points="0,0 11,4.5 0,9" fill="#16a34a"/></marker>
   </defs>
 
-  <!-- Participant Headers -->
-  <!-- Chemist -->
-  <rect x="15" y="10" width="100" height="30" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
-  <text x="65" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">Chemist</text>
-  <line x1="65" y1="40" x2="65" y2="325" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect width="1380" height="1560" fill="#ffffff"/>
 
-  <!-- API -->
-  <rect x="145" y="10" width="110" height="30" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
-  <text x="200" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">FastAPI Orchestrator</text>
-  <line x1="200" y1="40" x2="200" y2="325" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- Title -->
+  <text x="40" y="34" font-size="22" font-weight="700" fill="#0f172a">Formulation Candidate Workflow</text>
+  <text x="40" y="54" font-size="12.5" fill="#64748b">Sequence diagram · deterministic safety barrier · mandatory chemist sign-off · no automated lab booking</text>
 
-  <!-- LLM -->
-  <rect x="285" y="10" width="110" height="30" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
-  <text x="340" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">Inference Gateway</text>
-  <line x1="340" y1="40" x2="340" y2="325" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- ============ PHASE BANDS ============ -->
+  <rect x="20" y="130" width="1340" height="200" fill="#f8fafc"/>
+  <rect x="20" y="340" width="1340" height="165" fill="#ecfeff"/>
+  <rect x="20" y="515" width="1340" height="165" fill="#f5f3ff"/>
+  <rect x="20" y="690" width="1340" height="342" fill="#eff6ff"/>
+  <rect x="20" y="1042" width="1340" height="85" fill="#f1f5f9"/>
+  <rect x="20" y="1137" width="1340" height="298" fill="#fff7ed"/>
 
-  <!-- DB -->
-  <rect x="425" y="10" width="105" height="30" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
-  <text x="477" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">Store (SQL/BM25)</text>
-  <line x1="477" y1="40" x2="477" y2="325" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- phase strips -->
+  <rect x="20" y="130" width="26" height="200" fill="#64748b"/>
+  <rect x="20" y="340" width="26" height="165" fill="#0891b2"/>
+  <rect x="20" y="515" width="26" height="165" fill="#7c3aed"/>
+  <rect x="20" y="690" width="26" height="342" fill="#2563eb"/>
+  <rect x="20" y="1042" width="26" height="85" fill="#475569"/>
+  <rect x="20" y="1137" width="26" height="298" fill="#ea580c"/>
+  <text class="strip-t" transform="translate(38,230) rotate(-90)">1-3 · INTAKE</text>
+  <text class="strip-t" transform="translate(38,422) rotate(-90)">4-5 · EVIDENCE</text>
+  <text class="strip-t" transform="translate(38,597) rotate(-90)">6-7 · GENERATE</text>
+  <text class="strip-t" transform="translate(38,861) rotate(-90)">8 · VALIDATE</text>
+  <text class="strip-t" transform="translate(38,1084) rotate(-90)">9 · AUDIT</text>
+  <text class="strip-t" transform="translate(38,1286) rotate(-90)">10-13 · SIGN-OFF</text>
 
-  <!-- Rule Engine -->
-  <rect x="560" y="10" width="105" height="30" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="612" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">Safety Barrier</text>
-  <line x1="612" y1="40" x2="612" y2="325" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- ============ LIFELINES ============ -->
+  <line class="life" x1="150" y1="110" x2="150" y2="1435"/>
+  <line class="life" x1="370" y1="110" x2="370" y2="1435"/>
+  <line class="life" x1="590" y1="110" x2="590" y2="1435"/>
+  <line class="life" x1="810" y1="110" x2="810" y2="1435"/>
+  <line class="life" x1="1030" y1="110" x2="1030" y2="1435"/>
+  <line class="life" x1="1250" y1="110" x2="1250" y2="1435"/>
 
-  <!-- Audit -->
-  <rect x="685" y="10" width="85" height="30" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
-  <text x="727" y="30" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">Audit Log</text>
-  <line x1="727" y1="40" x2="727" y2="325" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- ============ SPECIAL FRAMES ============ -->
+  <!-- deterministic checks note -->
+  <rect x="400" y="706" width="760" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="780" y="724" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d4ed8">Deterministic checks · Python Decimal engine (no LLM in this step)</text>
+  <text x="780" y="742" text-anchor="middle" font-size="11.5" fill="#1e40af">Mass balance 100.0% ± 0.05%  ·  Units (cP, drum)  ·  Active costs  ·  Silicone ban</text>
 
-  <!-- Step 1: Submit Brief -->
-  <line x1="65" y1="60" x2="195" y2="60" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
-  <text x="130" y="55" text-anchor="middle" font-size="9" fill="#1e293b">1. Submit brief</text>
+  <!-- alt frame -->
+  <rect x="300" y="812" width="810" height="210" rx="4" fill="#ffffff" fill-opacity="0.6" stroke="#2563eb" stroke-width="1.4"/>
+  <rect x="300" y="812" width="44" height="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+  <text x="322" y="825" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">alt</text>
+  <text class="cond" x="354" y="830">[ all checks pass ]</text>
+  <line x1="300" y1="895" x2="1110" y2="895" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text class="cond" x="354" y="913">[ any check fails · retries &lt; 2 ]</text>
 
-  <!-- Step 2: Parse Brief -->
-  <line x1="200" y1="78" x2="335" y2="78" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
-  <text x="267" y="73" text-anchor="middle" font-size="9" fill="#1e293b">2. Parse brief to TargetSpecification</text>
+  <!-- sign-off gate -->
+  <rect x="70" y="1225" width="1260" height="200" rx="10" fill="#ffedd5" fill-opacity="0.55" stroke="#ea580c" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="92" y="1248" font-size="12.5" font-weight="700" fill="#c2410c" letter-spacing="0.6">MANDATORY CHEMIST SIGN-OFF GATE · ZERO AUTOMATED LAB BOOKING</text>
 
-  <!-- Step 3: Structured Target -->
-  <line x1="340" y1="96" x2="205" y2="96" stroke="#475569" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
-  <text x="272" y="91" text-anchor="middle" font-size="9" fill="#475569">3. Structured Target JSON</text>
+  <!-- ============ ACTIVATION BARS ============ -->
+  <rect class="act" x="146" y="170" width="8" height="20"/>
+  <rect class="act" x="146" y="1185" width="8" height="20"/>
+  <rect class="act" x="146" y="1285" width="8" height="20"/>
+  <rect class="act" x="146" y="1390" width="8" height="20"/>
+  <rect class="act" x="366" y="170" width="8" height="1240" fill="#c7d2fe" stroke="#818cf8"/>
+  <rect class="act" x="586" y="230" width="8" height="75"/>
+  <rect class="act" x="586" y="575" width="8" height="75"/>
+  <rect class="act" x="586" y="985" width="8" height="20"/>
+  <rect class="act" x="806" y="400" width="8" height="75"/>
+  <rect class="act" x="1026" y="780" width="8" height="170" fill="#bfdbfe" stroke="#2563eb"/>
+  <rect class="act" x="1246" y="1090" width="8" height="20"/>
+  <rect class="act" x="1246" y="1340" width="8" height="20"/>
 
-  <!-- Step 4: Bidirectional Query -->
-  <line x1="200" y1="114" x2="472" y2="114" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
-  <text x="336" y="109" text-anchor="middle" font-size="9" fill="#1e293b">4. Bidirectional query (trials, prices, notes)</text>
+  <!-- ============ MESSAGES ============ -->
+  <!-- 1 Chemist -> Orchestrator -->
+  <line class="a" x1="154" y1="180" x2="366" y2="180" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="174" cy="163" r="10" fill="#334155"/><text class="bn" x="174" y="167">1</text>
+  <text class="lbl" x="190" y="167">Submit brief</text>
 
-  <!-- Step 5: Verified Trials + Failures -->
-  <line x1="477" y1="132" x2="205" y2="132" stroke="#475569" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
-  <text x="341" y="127" text-anchor="middle" font-size="9" fill="#475569">5. Benchmarks + failure bounds (T-05, T-04 flags)</text>
+  <!-- 2 Orchestrator -> Gateway -->
+  <line class="a" x1="374" y1="240" x2="586" y2="240" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="394" cy="223" r="10" fill="#334155"/><text class="bn" x="394" y="227">2</text>
+  <text class="lbl" x="410" y="227">Parse brief</text>
+  <text class="sub" x="410" y="258">→ TargetSpecification</text>
 
-  <!-- Step 6: Draft Candidates -->
-  <line x1="200" y1="150" x2="335" y2="150" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
-  <text x="267" y="145" text-anchor="middle" font-size="9" fill="#1e293b">6. Draft candidates on evidence</text>
+  <!-- 3 Gateway -> Orchestrator -->
+  <line class="a dash" x1="586" y1="300" x2="374" y2="300" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="394" cy="283" r="10" fill="#334155"/><text class="bn" x="394" y="287">3</text>
+  <text class="lbl" x="410" y="287">Structured Target JSON</text>
 
-  <!-- Step 7: Candidates Output -->
-  <line x1="340" y1="168" x2="205" y2="168" stroke="#475569" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
-  <text x="272" y="163" text-anchor="middle" font-size="9" fill="#475569">7. CandidateFormulations JSON</text>
+  <!-- 4 Orchestrator -> Store -->
+  <line class="a" x1="374" y1="410" x2="806" y2="410" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="394" cy="393" r="10" fill="#334155"/><text class="bn" x="394" y="397">4</text>
+  <text class="lbl" x="410" y="397">Bidirectional query</text>
+  <text class="sub" x="410" y="428">trials · prices · notes</text>
 
-  <!-- Safety Barrier Box -->
-  <rect x="180" y="182" width="455" height="52" rx="4" fill="#eff6ff" fill-opacity="0.7" stroke="#93c5fd" stroke-width="1"/>
-  <text x="190" y="195" font-size="8.5" font-weight="600" fill="#1d4ed8">Deterministic Safety Barrier (Python Decimal Engine)</text>
-  
-  <!-- Step 8: Validate -->
-  <line x1="200" y1="208" x2="607" y2="208" stroke="#2563eb" stroke-width="1.2" marker-end="url(#arrow-blue)"/>
-  <text x="406" y="204" text-anchor="middle" font-size="8.5" fill="#1e40af">8a. Validate mass balance (100.0% &plusmn; 0.05%), units (cP, drum), active costs, silicone ban</text>
-  
-  <!-- Step 8b: Return Verified / Bounded Retry -->
-  <line x1="612" y1="224" x2="205" y2="224" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#arrow-blue)"/>
-  <text x="408" y="220" text-anchor="middle" font-size="8.5" fill="#1e40af">8b. Verified candidates + auditable costs (or re-prompt diagnostic; max 2 retries)</text>
+  <!-- 5 Store -> Orchestrator -->
+  <line class="a dash" x1="806" y1="470" x2="374" y2="470" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="394" cy="453" r="10" fill="#334155"/><text class="bn" x="394" y="457">5</text>
+  <text class="lbl" x="410" y="457">Benchmarks + failure bounds</text>
+  <text class="sub" x="410" y="488">T-05, T-04 flags</text>
 
-  <!-- Step 9: Audit Log -->
-  <line x1="200" y1="248" x2="722" y2="248" stroke="#475569" stroke-width="1.2" marker-end="url(#arrow)"/>
-  <text x="461" y="244" text-anchor="middle" font-size="9" fill="#475569">9. Write tamper-evident log (Evidence IDs, SHA-256 Hash)</text>
+  <!-- 6 Orchestrator -> Gateway -->
+  <line class="a" x1="374" y1="585" x2="586" y2="585" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="394" cy="568" r="10" fill="#334155"/><text class="bn" x="394" y="572">6</text>
+  <text class="lbl" x="410" y="572">Draft candidates</text>
+  <text class="sub" x="410" y="603">grounded in retrieved evidence</text>
 
-  <!-- Step 10: Present to Chemist -->
-  <line x1="200" y1="266" x2="70" y2="266" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow)"/>
-  <text x="135" y="262" text-anchor="middle" font-size="9" fill="#1e293b">10. Present candidates &amp; cost schedule</text>
+  <!-- 7 Gateway -> Orchestrator -->
+  <line class="a dash" x1="586" y1="645" x2="374" y2="645" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="394" cy="628" r="10" fill="#334155"/><text class="bn" x="394" y="632">7</text>
+  <text class="lbl" x="410" y="632">CandidateFormulations</text>
+  <text class="sub" x="410" y="663">structured JSON</text>
 
-  <!-- Approval Gate Box -->
-  <rect x="50" y="278" width="685" height="44" rx="4" fill="#fffbeb" fill-opacity="0.7" stroke="#fde68a" stroke-width="1"/>
-  <text x="60" y="291" font-size="8.5" font-weight="600" fill="#b45309">Mandatory Chemist Sign-Off Gate (Zero Automated Lab Booking)</text>
+  <!-- 8a Orchestrator -> Safety Barrier -->
+  <line class="a" x1="374" y1="790" x2="1026" y2="790" stroke="#2563eb" marker-end="url(#h-blue)"/>
+  <circle cx="394" cy="773" r="10" fill="#2563eb"/><text class="bn" x="394" y="777">8a</text>
+  <text class="lbl" x="412" y="777">Validate candidate set</text>
 
-  <!-- Step 11: Review & Sign-off -->
-  <line x1="65" y1="304" x2="195" y2="304" stroke="#d97706" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
-  <text x="130" y="300" text-anchor="middle" font-size="8.5" fill="#92400e">11. Adjust &amp; sign-off</text>
+  <!-- 8b Safety Barrier -> Orchestrator (pass) -->
+  <line class="a dash" x1="1026" y1="870" x2="374" y2="870" stroke="#2563eb" marker-end="url(#h-blue)"/>
+  <circle cx="394" cy="853" r="10" fill="#2563eb"/><text class="bn" x="394" y="857">8b</text>
+  <text class="lbl" x="412" y="857">Verified candidates + auditable costs</text>
 
-  <!-- Step 12: Record Signature -->
-  <line x1="200" y1="304" x2="722" y2="304" stroke="#d97706" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
-  <text x="461" y="300" text-anchor="middle" font-size="8.5" fill="#92400e">12. Record digital signature token</text>
+  <!-- 8c Safety Barrier -> Orchestrator (fail) -->
+  <line class="a dash" x1="1026" y1="943" x2="374" y2="943" stroke="#dc2626" marker-end="url(#h-red)"/>
+  <circle cx="394" cy="926" r="10" fill="#dc2626"/><text class="bn" x="394" y="930">8c</text>
+  <text class="lbl" x="412" y="930">Diagnostic report</text>
+  <text class="sub" x="412" y="961">failed checks + reasons</text>
 
-  <!-- Step 13: Emit Plan -->
-  <line x1="200" y1="316" x2="70" y2="316" stroke="#059669" stroke-width="1.2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
-  <text x="135" y="313" text-anchor="middle" font-size="8.5" fill="#065f46">13. Emit Approved Trial Plan</text>
+  <!-- 8d Orchestrator -> Gateway (re-prompt) -->
+  <line class="a" x1="374" y1="995" x2="586" y2="995" stroke="#dc2626" marker-end="url(#h-red)"/>
+  <circle cx="394" cy="978" r="10" fill="#dc2626"/><text class="bn" x="394" y="982">8d</text>
+  <text class="lbl" x="412" y="982">Re-prompt</text>
+  <text class="sub" x="412" y="1013">max 2 retries · loops back to step 6</text>
+  <text x="610" y="999" font-size="11.5" font-weight="600" fill="#dc2626">↺ then repeat 6 → 7 → 8a</text>
+
+  <!-- 9 Orchestrator -> Audit Log -->
+  <line class="a" x1="374" y1="1100" x2="1246" y2="1100" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="394" cy="1083" r="10" fill="#334155"/><text class="bn" x="394" y="1087">9</text>
+  <text class="lbl" x="410" y="1087">Write tamper-evident log</text>
+  <text class="sub" x="410" y="1118">evidence IDs · SHA-256 hash</text>
+
+  <!-- 10 Orchestrator -> Chemist -->
+  <line class="a" x1="366" y1="1195" x2="154" y2="1195" stroke="#334155" marker-end="url(#h-dark)"/>
+  <circle cx="174" cy="1178" r="10" fill="#334155"/><text class="bn" x="174" y="1182">10</text>
+  <text class="lbl" x="192" y="1182">Present candidates</text>
+  <text class="sub" x="192" y="1213">+ cost schedule</text>
+
+  <!-- 11 Chemist -> Orchestrator -->
+  <line class="a" x1="154" y1="1295" x2="366" y2="1295" stroke="#ea580c" marker-end="url(#h-orange)"/>
+  <circle cx="174" cy="1278" r="10" fill="#ea580c"/><text class="bn" x="174" y="1282">11</text>
+  <text class="lbl" x="192" y="1282">Adjust &amp; sign off</text>
+
+  <!-- 12 Orchestrator -> Audit Log -->
+  <line class="a" x1="374" y1="1350" x2="1246" y2="1350" stroke="#ea580c" marker-end="url(#h-orange)"/>
+  <circle cx="394" cy="1333" r="10" fill="#ea580c"/><text class="bn" x="394" y="1337">12</text>
+  <text class="lbl" x="412" y="1337">Record digital signature token</text>
+
+  <!-- 13 Orchestrator -> Chemist -->
+  <line class="a dash" x1="366" y1="1400" x2="154" y2="1400" stroke="#16a34a" marker-end="url(#h-green)"/>
+  <circle cx="174" cy="1383" r="10" fill="#16a34a"/><text class="bn" x="174" y="1387">13</text>
+  <text class="lbl" x="192" y="1387" fill="#15803d" style="fill:#15803d">Emit Approved Trial Plan</text>
+
+  <!-- ============ ACTOR HEADERS ============ -->
+  <rect class="actor" x="70" y="60" width="160" height="50" rx="9"/>
+  <text class="actor-t" x="150" y="82">Chemist</text>
+  <text class="actor-s" x="150" y="98">human reviewer</text>
+
+  <rect class="actor" x="290" y="60" width="160" height="50" rx="9"/>
+  <text class="actor-t" x="370" y="82">FastAPI Orchestrator</text>
+  <text class="actor-s" x="370" y="98">workflow control</text>
+
+  <rect class="actor" x="510" y="60" width="160" height="50" rx="9"/>
+  <text class="actor-t" x="590" y="82">Inference Gateway</text>
+  <text class="actor-s" x="590" y="98">LLM calls</text>
+
+  <rect class="actor" x="730" y="60" width="160" height="50" rx="9"/>
+  <text class="actor-t" x="810" y="82">Store</text>
+  <text class="actor-s" x="810" y="98">SQL / BM25</text>
+
+  <rect class="actor" x="950" y="60" width="160" height="50" rx="9" style="fill:#dbeafe;stroke:#2563eb;stroke-width:2"/>
+  <text class="actor-t" x="1030" y="82" style="fill:#1d4ed8">Safety Barrier</text>
+  <text class="actor-s" x="1030" y="98" style="fill:#3b82f6">deterministic</text>
+
+  <rect class="actor" x="1170" y="60" width="160" height="50" rx="9"/>
+  <text class="actor-t" x="1250" y="82">Audit Log</text>
+  <text class="actor-s" x="1250" y="98">tamper-evident</text>
+
+  <!-- ============ LEGEND ============ -->
+  <rect x="20" y="1458" width="1340" height="84" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="40" y="1482" font-size="12" font-weight="700" fill="#0f172a">Legend</text>
+
+  <line class="a" x1="40" y1="1507" x2="90" y2="1507" stroke="#334155" marker-end="url(#h-dark)"/>
+  <text class="legend-t" x="100" y="1511">Request / call</text>
+  <line class="a dash" x1="230" y1="1507" x2="280" y2="1507" stroke="#334155" marker-end="url(#h-dark)"/>
+  <text class="legend-t" x="290" y="1511">Response / return</text>
+  <line class="a" x1="450" y1="1507" x2="500" y2="1507" stroke="#2563eb" marker-end="url(#h-blue)"/>
+  <text class="legend-t" x="510" y="1511">Safety Barrier (deterministic)</text>
+  <line class="a" x1="740" y1="1507" x2="790" y2="1507" stroke="#dc2626" marker-end="url(#h-red)"/>
+  <text class="legend-t" x="800" y="1511">Failure / retry path</text>
+  <line class="a" x1="960" y1="1507" x2="1010" y2="1507" stroke="#ea580c" marker-end="url(#h-orange)"/>
+  <text class="legend-t" x="1020" y="1511">Human gate</text>
+  <line class="a dash" x1="1130" y1="1507" x2="1180" y2="1507" stroke="#16a34a" marker-end="url(#h-green)"/>
+  <text class="legend-t" x="1190" y="1511">Final output</text>
 </svg>

@@ -1007,10 +1007,10 @@
         "master_price": 32000.0,
         "master_currency": "INR",
         "master_updated": "2026-01-05",
-        "latest_feed_price": 32800.0,
+        "latest_feed_price": 164.0,
         "latest_feed_currency": "INR",
         "latest_feed_month": "2026-05",
-        "source": "PurchaseOne"
+        "source": "quote per kg"
       },
       {
         "code": "RM-201",

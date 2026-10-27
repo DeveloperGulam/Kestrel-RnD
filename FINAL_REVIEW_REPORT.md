@@ -21,7 +21,8 @@ This audit conducted a rigorous, evidence-based verification across all Mileston
    - The SHA-256 hash was calculated before and after all audit and test runs: `d64e01af845b13385076bb3cc6aa94485a9bc56159c990a238e64708bd5d2710`.
    - Loaded strictly read-only; zero modification to source records.
 4. **Automated Test Suite (VERIFIED):**
-   - All **50 automated tests passed in 0.13 seconds** (50 collected, 50 passed, 0 failed) with exit status `0`.
+   - All **74 automated tests passed in ~0.42 seconds** (74 collected, 74 passed, 0 failed) with exit status `0`.
+   - Includes 23 workbook audit regression tests, 27 synthetic rule-level tests, and 24 assistant MVP regression tests (approval semantics, empirical evidence provenance, duplicate prevention, and cryptographic tamper detection).
 5. **API Cost Arithmetic (VERIFIED):**
    - Total Monthly Cost (352 requests): $352 \times \$0.0122 = \mathbf{\$4.2944/\text{month}} \implies \mathbf{\$4.29/\text{month}}$.
    - Per Chemist Monthly Cost: $\frac{\$4.2944}{8} = \mathbf{\$0.5368/\text{chemist/month}} \implies \mathbf{\$0.537/\text{chemist/month}}$ (well below the $< \$1.00$ limit).
@@ -76,9 +77,10 @@ All commands below were executed live during this verification audit within the 
 ### 3.3 Automated Test Suite Execution
 * **Execution Command:** `shasum -a 256 Kestrel_RnD_Export_2026-05.xlsx && .venv/bin/pytest -v && shasum -a 256 Kestrel_RnD_Export_2026-05.xlsx`
 * **Exit Status:** `0` (Success)
-* **Test Count & Results:** **50 passed in 0.13 seconds** (50 collected, 50 passed, 0 failed, 0 skipped, 0 warnings).
-  * 22 workbook-specific regression tests (`test_schema_and_keys.py`, `test_formulations.py`, `test_units_and_dates.py`, `test_pricing_integrity.py`, `test_cross_sheet_integrity.py`).
-  * 28 rule-level boundary, edge-case, stability, and softness tests (`test_rule_level_auditors.py`).
+* **Test Count & Results:** **74 passed in ~0.42 seconds** (74 collected, 74 passed, 0 failed, 0 skipped, 0 warnings).
+  * 23 workbook-specific regression tests (`test_schema_and_keys.py`, `test_formulations.py`, `test_units_and_dates.py`, `test_pricing_integrity.py`, `test_cross_sheet_integrity.py`).
+  * 27 rule-level boundary, edge-case, stability, and softness tests (`test_rule_level_auditors.py`).
+  * 24 assistant MVP regression tests (`test_assistant_mvp.py`) covering approval semantics, empirical evidence provenance, duplicate prevention, and cryptographic tamper detection.
 
 ### 3.4 Workbook Sheet Inventory Verification
 * **Execution Command:** Python `openpyxl.load_workbook("Kestrel_RnD_Export_2026-05.xlsx", read_only=True).sheetnames`
@@ -189,6 +191,6 @@ All requirements from the brief and consistency review have been met:
 - Critique PDF is **2 pages** (1–2 pages ceiling).
 - Workflow sequence diagram is rendered visually as a vector SVG.
 - Deterministic validation barrier and chemist sign-off gate are fully documented.
-- All 50 tests pass, workbook SHA-256 is unchanged, and cost arithmetic is verified.
+- All 74 tests pass, workbook SHA-256 is unchanged, and cost arithmetic is verified.
 
 **Submission Status: READY FOR SUBMISSION**
